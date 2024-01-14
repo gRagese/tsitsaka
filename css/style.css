@@ -1,0 +1,657 @@
+a {
+    text-decoration: none;
+}
+
+/* body {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.sidebar-container {
+    display: none;
+}
+
+.sidebar-container-active {
+    display: grid;
+    grid-auto-flow: row;
+    background-color: #000;
+    width: 10vw;
+    z-index: 3;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+} */
+
+/* 
+.header__container a {
+    transition: 3s;
+} */
+
+.google_img {
+    width: 30vw;
+    height: 50vh;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    /* gap: 10px; */
+    grid-template-columns: 1fr;
+    grid-template-rows: 336px 1fr;
+    margin: 0 auto;
+}
+
+header {
+    /* height: 336px; */
+    gap: 10px;
+    padding: 24px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: url('../images/zyro-image.png'), linear-gradient(rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0.7) 100%);
+    position: relative;
+    background-size: cover; /* Размеры фона */
+    background-position: center; /* Позиция фона */
+}   
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0.7) 100%);
+    z-index: 1;
+    box-shadow: 0px 6px 13px 0px #888888;
+}
+
+.header__container {
+    /* background-color: brown; */
+    color: #fff;
+    z-index: 2;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.header__title {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.header__title__title {
+    color: #FFF;
+    font-family: Jua;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.header__title__quote {
+    color: #FFF;
+    font-family: Alata;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 70%;
+}
+
+.header__buttons {
+    display: flex;
+    justify-content: end;
+    font-size: 1.5rem;
+}
+
+.header__buttons__container {
+}
+
+.header__buttons__lang {
+    color: #FFF;
+    font-family: Alata;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 5vw;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: inherit; /* Использовать цвет текста родительского элемента */
+}
+
+.header__buttons__login {
+    color: #FFF;
+    font-family: Alata;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 5vw;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: inherit;
+}
+
+.header__buttons__about-us {
+    color: #FFF;
+    font-family: Alata;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.header__menu-btn{
+    display: none;
+    color: #FFF;
+    font-family: Alata;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 5vw;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: inherit;
+    margin-right: 0px;
+}
+
+.main-container {
+    /* background-color: steelblue; */
+    display: grid;
+    gap: 10px;
+    grid-template-rows: 10px;
+    padding-top: 200px;
+    padding-left: 71px;
+    padding-right: 71px;
+}
+
+.main-container__title {
+    color: #1E1E1E;
+    font-family: Jua;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    letter-spacing: 20px;
+}
+
+.main__container{
+    display: grid;
+    grid-template-rows: 74px 1fr;
+    margin-top: 103px;
+    justify-content: center;
+}
+
+.main__container__title{
+    color: #1E1E1E;
+    font-family: Alata;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.main__container__title q {
+    color: #EC1D1D;
+    font-family: Alata;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.main__container__cards {
+    /* background-color: brown; */
+    display: grid;
+    /* gap: 150px; */
+    column-gap: 150px;
+    row-gap: 75px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.food-card{
+    background-color: #000;
+    /* background-color: blue; */
+    /* padding-top: 20px; */
+    border-radius: 35px; 
+    /* width: 20vw;
+    height: 40vh; */
+    width: 18vw;
+    height: 20vw;
+    display: grid;
+    grid-auto-flow: row;
+}
+
+.food-card__img {
+    color: white;
+    display: grid;
+    justify-content: center;
+    margin-top: 29px;
+}
+
+.food-card img {
+    background-color: white;
+    width: 15vw;
+    height: 10vw;
+    border-radius: 16px;
+}
+
+.food-card__text {
+    display: flex;
+    color: #FFF;
+    font-family: Assistant;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    justify-content: space-around;
+}
+
+.food-card__circles {
+    display: flex;
+    justify-content: space-around;
+}
+
+.circle {
+    background-color: #FFF;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.footer-container {
+    background-color: black;
+    /* height: 452px; */
+    padding: 20px;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 100px;
+}   
+
+.footer__container:nth-of-type(2) {
+    padding-left: 20px;
+    /* background-color: brown; */
+    border-left: 2px solid #757171;
+    border-right: 2px solid #757171;
+    box-sizing: border-box;
+}
+
+.footer__container__title {
+    color: #FFF;
+    font-family: Alata;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.footer__container__text {
+    color: #FFF;
+    font-family: Assistant;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+.footer__container__flex {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 18px;
+    gap: 14px;
+}
+
+.footer__container__grid {
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+}
+
+.footer__grid__days {
+    text-align: start;
+}
+
+.footer__grid__time {
+    text-align: end;
+    padding-right: 20px;
+}
+
+
+/* @media(max-width: 1440px) {
+    .container {
+        width: 1200px;
+    }
+
+    header {
+        background-color: red;
+    }
+} */
+
+/* header fine */
+@media(max-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+
+}
+
+/* header change */
+@media(max-width: 1024px) {
+    .main-container{
+
+    }
+
+    .main-container__title {
+        font-size: 1.5rem;
+    }
+
+    .main__container {
+
+    }
+
+    .main__container__title, .main__container__title q{
+        font-size: 1.4rem;
+    }
+
+    .main__container__cards {
+        /* display: grid;
+        gap: 10px; */
+        /* grid-template-columns: 1fr 1fr; */
+    }
+
+    .food-card__text{
+        font-size: 1rem;
+    }
+
+    .circle {
+        width: 15px;
+        height: 15px;
+    }
+
+    .container {
+        max-width: 1024px;
+        grid-template-rows: 200px 1fr;
+    }
+
+    .header__title__title {
+        color: #FFF;
+        font-family: Jua;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    
+    .header__title__quote {
+        color: #FFF;
+        font-family: Alata;
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        opacity: 70%;
+    }
+
+    .header__buttons__lang {
+        color: #FFF;
+        font-family: Alata;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-right: 5vw;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        color: inherit; /* Использовать цвет текста родительского элемента */
+    }
+    
+    .header__buttons__login {
+        color: #FFF;
+        font-family: Alata;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-right: 5vw;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        color: inherit;
+    }
+    
+    .header__buttons__about-us {
+        color: #FFF;
+        font-family: Alata;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration: none;
+    }
+
+    .google_img {
+        height: 35vh;
+    }
+
+}
+
+/* header buttons move to sidebar 
+    footer changes
+*/
+@media(max-width: 768px) {
+    .main-container{
+
+    }
+
+    .main-container__title {
+        font-size: 1.5rem;
+    }
+
+    .main__container {
+
+    }
+
+    .main__container__title, .main__container__title q{
+        font-size: 1.25rem;
+    }
+
+    .main__container__cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .food-card{
+        width: 30vw;
+        height: 40vh;
+    }
+
+    .food-card img{
+        width: 18vw;
+        height: 16vh;
+    }
+
+    .food-card__text{
+        font-size: 1rem;
+    }
+
+    .circle {
+        width: 12px;
+        height: 12px;
+    }
+
+    .google_img{
+        width: 96vw;
+    }
+
+    .footer__grid__time{
+        padding-right: 0;
+    }
+
+    .footer__container__title {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .footer__container__text {
+        font-size: 0.75rem;
+    }
+
+    .footer-container {
+        grid-template-areas: 
+        'info'
+        'hours'
+        'address'
+        ;
+        grid-template-columns: 1fr;
+    }
+
+    .footer__container__flex-1 {
+        align-items: flex-end;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer__container__flex-2 {
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .footer__container:nth-of-type(1){
+        grid-area: info;
+    }
+
+    .footer__container:nth-of-type(2){
+        grid-area: hours;
+        border-left: none;
+        border-right: none;
+        border-top: 2px solid #757171;
+        border-bottom: 2px solid #757171;
+        padding-bottom: 20px;
+        padding-left: 0;
+    }
+
+    .footer__container:nth-of-type(3){
+        grid-area: address;
+    }
+
+    .container {
+        max-width: 768px;
+        grid-template-rows: 100px 1fr;
+    }
+
+    .header__buttons__lang {
+        display: none;
+    }
+
+    .header__buttons__login {
+        display: none;
+    }
+
+    .header__buttons__about-us{
+        display: none;
+    }
+
+    .header__menu-btn {
+        display: block;
+    }
+}
+
+@media(max-width: 480px) {
+
+    .main-container{
+
+    }
+
+    .main-container__title {
+        font-size: 1.5rem;
+    }
+
+    .main__container {
+
+    }
+
+    .main__container__title, .main__container__title q{
+        font-size: 1.25rem;
+    }
+
+    .main__container__cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .food-card{
+        width: 55vw;
+        height: 25vh;
+    }
+
+    .food-card img{
+        width: 41vw;
+        height: 11vh;
+    }
+
+    .food-card__text{
+        font-size: 1rem;
+    }
+
+    .circle {
+        width: 12px;
+        height: 12px;
+    }
+
+
+    .footer__container__title {
+        font-size: 1rem;
+    }
+
+    .footer__container__text {
+        font-size: 0.75rem;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .header__title__title {
+        color: #FFF;
+        font-family: Jua;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    
+    .header__title__quote {
+        color: #FFF;
+        font-family: Alata;
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        opacity: 70%;
+    }
+
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
+header option {
+    color: #000;
+}
