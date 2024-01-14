@@ -12,19 +12,27 @@ a {
 }
 
 .sidebar-container-active {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
     display: grid;
     grid-auto-flow: row;
     background-color: #000;
-    width: 10vw;
+    width: 20vw;
     z-index: 3;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+} 
+
+.container-black {
+    background: linear-gradient(rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0.7) 100%);
+    z-index: 4;
 } */
 
-/* 
 .header__container a {
     transition: 3s;
-} */
+}
 
 .google_img {
     width: 30vw;
