@@ -663,3 +663,9 @@ header::before {
 header option {
     color: #000;
 }
+
+.font-ru{
+    font-family: "Play", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}

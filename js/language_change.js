@@ -27,4 +27,22 @@ function changeLanguage(){
     }
 }
 
+function changeFont(){
+    hash = window.location.hash;
+    hash = hash.substr(1);
+
+    for(let key in langArr){
+        let el = document.querySelector('.lng-'+key);
+        if(el){
+            if(hash =='ru'){
+                el.classList.add('font-ru')
+            }
+            else if(hash !='ru'){
+                el.classList.remove('font-ru')
+            }
+        }
+        }
+}
+
 changeLanguage();
+changeFont();
